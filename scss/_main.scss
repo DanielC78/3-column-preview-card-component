@@ -1,0 +1,128 @@
+/* font-family: "Lexend Deca", sans-serif; */
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 375px;
+  font-size: 100%;
+  font-family: "Lexend Deca", sans-serif;
+  color: $Very-light-gray;
+  background-color: $Very-light-gray;
+}
+
+p {
+  line-height: 1.6;
+  font-size: $font-small;
+  color: $Transparent-white;
+}
+
+.container {
+  border-radius: $font-small;
+  padding: 20px;
+  text-align: left;
+
+  p {
+    margin-bottom: 30px;
+  }
+
+  img {
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-family: "Big Shoulders Display", cursive;
+    font-size: $font-medium;
+    line-height: 2;
+    margin-bottom: 20px;
+  }
+
+  &__sedan {
+    border-radius: 10px 10px 0 0;
+    padding: 30px;
+    background-color: $Bright-orange;
+
+    .button {
+      color: $Bright-orange;
+    }
+  }
+  &__suv {
+    padding: 30px;
+    background-color: $Dark-cyan;
+
+    .button {
+      color: $Dark-cyan;
+    }
+  }
+
+  &__luxury {
+    border-radius: 0 0 10px 10px;
+    padding: 30px;
+    background-color: $Very-dark-cyan;
+
+    .button {
+      color: $Very-dark-cyan;
+    }
+  }
+
+  .button {
+    border: 2px solid $Very-light-gray;
+    border-radius: 30px;
+    background-color: $Very-light-gray;
+    font-size: $font-small;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      border: 2px solid $Very-light-gray;
+      background: transparent;
+      color: $Very-light-gray;
+    }
+  }
+}
+
+@media (min-width: 976px) {
+
+  h1{
+    font-size: 45px !important;
+  }
+  .container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 900px;
+
+    &__sedan {
+      border-radius: 10px 0 0 10px;
+      padding: 60px;
+    }
+
+    &__luxury {
+      border-radius: 0 10px 10px 0;
+      padding: 60px;
+    }
+
+    &__suv{
+      padding: 60px;
+    }
+
+    p{
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1100px;
+  }
+}
